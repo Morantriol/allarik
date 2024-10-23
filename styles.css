@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "LineramaBold";
+  src: local("LineramaBold"),
+    local("Linerama-Bold"),
+    url("fonts/Linerama/LineramaBold.ttf") format("truetype");
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "LineramaBold", sans-serif;
+  color: white;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+}
+
+.endgame-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #5600E280;
+  background-blend-mode: darken;
+  z-index: 5;
+}
+
+.world {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  background-image: url("imgs/sky.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.score {
+  position: absolute;
+  font-size: 7vmin;
+  right: 3vmin;
+  top: 3vmin;
+}
+
+.start-screen {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.replay-screen {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.start-screen-text {
+  font-size: 20vmin;
+}
+
+.start-screen-text:hover {
+  color: #5600E2;
+}
+
+.replay-screen-text {
+  font-size: 10vmin;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.replay-screen-button {
+  height: 10vmin;
+  width: 46vmin;
+  margin-top: 8vmin;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.ground {
+  --left: 0;
+  position: absolute;
+  z-index: 1;
+  height: 12%;
+  bottom: 0;
+  left: calc(var(--left) * 1vw);
+}
+
+.mountains {
+  --left: 50;
+  position: absolute;
+  height: 17%;
+  bottom: 9%;
+  left: calc(var(--left) * 1%);
+}
+
+.clouds-0 {
+  --left: 6;
+  position: absolute;
+  z-index: 1;
+  height: 13%;
+  top: 15%;
+  left: calc(var(--left) * 1%);
+}
+
+.clouds-1 {
+  --left: 59;
+  position: absolute;
+  height: 17%;
+  top: 30%;
+  left: calc(var(--left) * 1%);
+}
+
+.allarik {
+  --bottom: 7;
+  position: absolute;
+  z-index: 3;
+  left: 11%;
+  height: 15%;
+  bottom: calc(var(--bottom) * 1%); 
+}
+
+.obstacle-0 {
+  position: absolute;
+  z-index: 2;
+  left: calc(var(--left) * 1%);
+  bottom: 7%;
+  height: 8%;
+}
+
+.obstacle-1 {
+  position: absolute;
+  z-index: 2;
+  left: calc(var(--left) * 1%);
+  bottom: 7%;
+  height: 10%;
+}
+
+.obstacle-2 {
+  position: absolute;
+  z-index: 2;
+  left: calc(var(--left) * 1%);
+  bottom: 7%;
+  height: 14%;
+}
+
+.obstacle-3 {
+  position: absolute;
+  z-index: 2;
+  left: calc(var(--left) * 1%);
+  bottom: 7%;
+  height: 9%;
+}
